@@ -19,7 +19,7 @@ post '/login' do
       'You Must <a href="/">Log In</a> to View Your Balance'
     end
   end
-  end
+
 
   get '/account' do
     erb :account
