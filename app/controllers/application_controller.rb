@@ -14,7 +14,7 @@ post '/login' do
     if @user = User.find_by(name: params["name"], password: params["password"])
       @user.save
       session[:user_id] = @user.id
-      redirect '/users/home'
+      redirect ''
     else
       'You Must <a href="/">Log In</a> to View Your Balance'
     end
