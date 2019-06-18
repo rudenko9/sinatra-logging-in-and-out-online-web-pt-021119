@@ -11,7 +11,14 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-
+post '/login' do
+    if @user = User.find_by(username: params["username"], password: params["password"])
+      session[:user_id] = @user.id
+      redirect '/account'
+    else
+      'You Must <a href="/">Log In</a> to View Your Balance'
+    end
+  end
   end
 
   get '/account' do
