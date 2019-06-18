@@ -22,6 +22,7 @@ post '/login' do
   end
 
   get '/account' do
+    erb :account
 
   end
 
